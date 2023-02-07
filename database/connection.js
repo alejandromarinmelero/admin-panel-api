@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 const Connection = async () => {
 
     try {
-       await mongoose.connect('mongodb://localhost:27017/my_dashboard') 
+       await mongoose.connect(process.env.MONGODB_URI);
        console.log('conectado con exito');
     } catch (error) {
         console.log(error);
