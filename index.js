@@ -20,7 +20,8 @@ app.use(express.json())
 //Convertir a objeto JSON cualquier formulario que se envie con el formato form.urlencoded
 app.use(express.urlencoded({extended: true}));
 app.use(cors({
-    origin: 'https://adminpanel-crud-example.onrender.com/'
+    origin: ['http://localhost:27017', 
+    'https://adminpanel-crud-example.onrender.com/']
 }))
 
 //Cargar configuracion de rutas
